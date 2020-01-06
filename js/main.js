@@ -25,7 +25,8 @@ Menu
 		//content = document.querySelector( '.content-wrap' ),
 		openbtn = document.getElementById( 'open-button' ),
 		closebtn = document.getElementById( 'close-button' ),
-		isOpen = false;
+		isOpen = true;
+		classie.add( bodyEl, 'show-menu' );
 
 	function init() {
 		initEvents();
@@ -49,7 +50,7 @@ Menu
 
 	function toggleMenu() {
 		if( isOpen ) {
-			classie.remove( bodyEl, 'show-menu' );
+			classie.add( bodyEl, 'show-menu' );
 		}
 		else {
 			classie.add( bodyEl, 'show-menu' );
